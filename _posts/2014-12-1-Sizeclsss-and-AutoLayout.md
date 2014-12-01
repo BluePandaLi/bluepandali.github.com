@@ -8,9 +8,10 @@ tags: [sizeclass,autolayout]
 在IOS8之后使用XIB开发将是大势所趋，[@叶孤城___](http://www.jianshu.com/users/b82d2721ba07/latest_articles) 博客中有很好的三篇教程很适合入门。
 
 [SizeClass和AutoLayout教程1](http://www.jianshu.com/p/bd071f9a558d) 简单添加AutoLayout约束   
-[SizeClass和AutoLayout教程2](http://www.jianshu.com/p/a4cf3db81c0b) 多个View添加AutoLayout约束，AutoLayout与SizeClass的协作  
-[SizeClass和AutoLayout教程3](http://www.jianshu.com/p/3d6b2341fd83) SizeClass与Font Size控制
-
+[SizeClass和AutoLayout教程2](http://www.jianshu.com/p/a4cf3db81c0b) 多个View添加AutoLayout约束  
+[SizeClass和AutoLayout教程3](http://www.jianshu.com/p/3d6b2341fd83) AutoLayout与SizeClass的协作  
+[SizeClass和AutoLayout教程4](http://www.jianshu.com/p/e72e957497b3) SizeClass与FontSize、ImageSet控制  
+[Beginning Adaptive Layout Tutorial](http://www.raywenderlich.com/83276/beginning-adaptive-layout-tutorial) 原英文教程  
 总结：
 
 *	AutoLayout本质是使用各种条件告诉你View的位置和大小。
