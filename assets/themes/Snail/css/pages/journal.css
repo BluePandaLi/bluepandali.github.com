@@ -113,7 +113,7 @@
 #journal-articles-block .journal-article .journal-body span.the-article {
 	padding: 15px 0;
 }
-
+/*
 .the-article blockquote {
 	padding:10px 10px 5px;
 	font-family:georgia,serif;
@@ -136,7 +136,7 @@
 .the-article blockquote::after {
 	content:"\201D";
 	float:right;
-}
+}*/
 #journal-articles-block .journal-article .journal-body img {
 	clear:both;
 }
