@@ -15,7 +15,7 @@ Android 学习目录，包括学习路线，学习资源，相关项目代码
 3. 安卓基础
 	
 	* 生存周期
-	* 四大核心组件 Activity, Service, Broadcast Receiver, Contnet Provider. 
+	* 四大核心组件 [Activity](http://dev-panda.com/android/2014/12/29/Activity/), Service, Broadcast Receiver, Contnet Provider. 
 	* Toast 和 Notificatio
 	* 多点触
 	* 绘图API
