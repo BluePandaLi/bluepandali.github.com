@@ -3,10 +3,10 @@ layout: post
 category: IOS
 title: Gesture In IOS
 tagline: by BluePandaLi
-tags: [手势，Gesture]
+tags: [手势,Gesture]
 ---
 
-IOS中的手势们
+IOS中的手势
 
 <!--more-->
 
