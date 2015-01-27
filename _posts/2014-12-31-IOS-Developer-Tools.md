@@ -6,7 +6,7 @@ tagline: by BluePandaLi
 tags: [Tools]
 ---
 
-一些开发IOS的效率工具，插件，脚本等。
+一些开发IOS的效率工具，插件，脚本，开源轮子等。
 
 <!--more-->
 
@@ -20,3 +20,8 @@ tags: [Tools]
 #工具
 
 #脚本
+
+#开源代码
+
+[SlackTextViewController](https://github.com/slackhq/SlackTextViewController) A drop-in UIViewController subclass with a growing text input view and other useful messaging features. Meant to be a replacement for UITableViewController & UICollectionViewController.
+
