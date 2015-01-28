@@ -6,7 +6,7 @@ tagline: by BluePandaLi
 tags: [animation]
 ---
 
-该文章学习自 objc.io 英文：[Animations Explained](http://www.objc.io/issue-12/animations-explained.html) 中文：[动画解释](http://objccn.io/issue-12-1/)
+该篇学习笔记学习自 objc.io 英文：[Animations Explained](http://www.objc.io/issue-12/animations-explained.html) 中文：[动画解释](http://objccn.io/issue-12-1/)
 
 <!--more-->
 
@@ -40,7 +40,7 @@ tags: [animation]
 最常见的情况是View的一个属性改变为另外一个属性。
 
 ![image](http://img.objccn.io/issue-12/rocket-linear.gif)
-opacity
+
 
 上面的图片中小火箭 改变的 x.position 这个属性，用以下代码可以实现该属性。
 
@@ -51,6 +51,32 @@ opacity
 	animation.duration = 1;
 
 	[rocket.layer addAnimation:animation forKey:@"basic"];
-	
+
+* position.x 是储存在 position 属性中的结构体成员。Core Animation 支持的路径键见此[列表](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreAnimation_guide/Key-ValueCodingExtensions/Key-ValueCodingExtensions.html)
+* 该段代码完成之后，火箭将会出现在初始位置。因为在默认情况下，动画不会在超出其持续时间后还修改 presentation layer，并且在结束时候会彻底移除，当移除动画时presentation layer 的值将会回到modle layer 的值。
+* 如果想要保持动画结束时的状态有以下两种方法
+
+		//方法1 更改 modle layer的值
+		rocket.layer.position = CGPointMake(455, 61);
+		
+		//方法2 禁止自动移除 并设置fillMode, 不建议使用该方法，动画一直存在会消耗渲染器的性能。
+		animation.fillMode = kCAFillModeForward;
+		animation.removedOnCompletion = NO;
+* 我们创建的动画是可以复用的，animation 在加载到 layer 的时候已经创建了一份拷贝，所以同一个动画实例可以加到不同的 layer之上。
+
+
+		CABasicAnimation *animation = [CABasicAnimation animation];
+		animation.keyPath = @"position.x";
+		animation.byValue = @378;
+		animation.duration = 1;
+
+		[rocket1.layer addAnimation:animation forKey:@"basic"];
+		rocket1.layer.position = CGPointMake(455, 61);
+
+		animation.beginTime = CACurrentMediaTime() + 0.5;
+
+		[rocket2.layer addAnimation:animation forKey:@"basic"];
+		rocket2.layer.position = CGPointMake(455, 111);
+* byValue 上面代码使用了byValue 其作用是 使用 presentation layer 当前值作为初始值，加上byValue的值后结束。
 
 
