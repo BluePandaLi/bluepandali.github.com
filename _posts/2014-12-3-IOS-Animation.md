@@ -6,7 +6,7 @@ tagline: by BluePandaLi
 tags: [animation]
 ---
 
-该篇学习笔记学习自 objc.io 英文：[Animations Explained](http://www.objc.io/issue-12/animations-explained.html) 中文：[动画解释](http://objccn.io/issue-12-1/)
+该篇文章学习自 objc.io 英文站：[Animations Explained](http://www.objc.io/issue-12/animations-explained.html) 中文站：[动画解释](http://objccn.io/issue-12-1/)
 
 <!--more-->
 
@@ -22,11 +22,11 @@ tags: [animation]
 * presentation layer tree （表示层树）动画正在表现值的近似
 * rendering tree （渲染树）
 
-虽然可能不会直接去修改 presentation layer tree ，但是可以用来输出用以保证动画的正确性，另外我们会经常使用它的值创建新的动画。
+虽然可能不会直接去修改 presentation layer tree ，但是可以用来输出用以保证动画的正确性，另外我们会经常使用它的值创建新的动画。使用下面两个方法可以很轻松的获取两个 layer
 
 	-[CALayer presentationLayer]
 	-[CALayer modelLayer]
-使用上面两个方法可以很轻松的获取两个 layer
+
 
 
 ###动画种类
@@ -80,3 +80,11 @@ tags: [animation]
 * byValue 上面代码使用了byValue 其作用是 使用 presentation layer 当前值作为初始值，加上byValue的值后结束。
 
 
+todo:
+
+kCAFillModeForward
+CACurrentMediaTime()
+
+fromValue toValue byValue
+additive
+http://studentdeng.github.io/blog/2014/06/24/core-animation/
